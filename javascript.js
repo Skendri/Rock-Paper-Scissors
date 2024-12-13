@@ -71,7 +71,7 @@ function playGame(playerMove) {
     if (computerMove === "rock") {
       result = "you lose loqe";
     } else if (computerMove === "paper") {
-      result = "you win karo";
+      result = "you win";
     } else if (computerMove === "scissors") {
       result = "ties";
     }
