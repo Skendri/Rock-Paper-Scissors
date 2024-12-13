@@ -69,7 +69,7 @@ function playGame(playerMove) {
   let result = "";
   if (playerMove === "scissors") {
     if (computerMove === "rock") {
-      result = "you lose loqe";
+      result = "you lose";
     } else if (computerMove === "paper") {
       result = "you win";
     } else if (computerMove === "scissors") {
@@ -77,25 +77,25 @@ function playGame(playerMove) {
     }
   } else if (playerMove === "paper") {
     if (computerMove === "rock") {
-      result = "you win karo";
+      result = "you win";
     } else if (computerMove === "paper") {
       result = "ties";
     } else if (computerMove === "scissors") {
-      result = "you lose loqe";
+      result = "you lose";
     }
   } else if (playerMove === "rock") {
     if (computerMove === "rock") {
       result = "ties";
     } else if (computerMove === "paper") {
-      result = "you lose loqe";
+      result = "you lose ";
     } else if (computerMove === "scissors") {
-      result = "you win karo";
+      result = "you win";
     }
   }
 
-  if (result === "you win karo") {
+  if (result === "you win") {
     score.wins = score.wins + 1;
-  } else if (result === "you lose loqe") {
+  } else if (result === "you lose") {
     score.losses += 1;
   } else if (result === "ties") {
     score.ties += 1;
