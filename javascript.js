@@ -151,8 +151,14 @@ function pickComputerMove() {
 
   return computerMove;
 
+<<<<<<< HEAD
   // return "rock";
   // return 5;
 }
 
 
+=======
+  return "rock";
+  return 5;
+}
+>>>>>>> 97290c3cc6276e1b4296907d1c0f306f0f38e42e
