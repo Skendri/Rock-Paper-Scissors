@@ -69,33 +69,33 @@ function playGame(playerMove) {
   let result = "";
   if (playerMove === "scissors") {
     if (computerMove === "rock") {
-      result = "you lose loqe";
+      result = "you lose";
     } else if (computerMove === "paper") {
-      result = "you win karo";
+      result = "you win";
     } else if (computerMove === "scissors") {
       result = "ties";
     }
   } else if (playerMove === "paper") {
     if (computerMove === "rock") {
-      result = "you win karo";
+      result = "you win";
     } else if (computerMove === "paper") {
       result = "ties";
     } else if (computerMove === "scissors") {
-      result = "you lose loqe";
+      result = "you lose";
     }
   } else if (playerMove === "rock") {
     if (computerMove === "rock") {
       result = "ties";
     } else if (computerMove === "paper") {
-      result = "you lose loqe";
+      result = "you lose ";
     } else if (computerMove === "scissors") {
-      result = "you win karo";
+      result = "you win";
     }
   }
 
-  if (result === "you win karo") {
+  if (result === "you win") {
     score.wins = score.wins + 1;
-  } else if (result === "you lose loqe") {
+  } else if (result === "you lose") {
     score.losses += 1;
   } else if (result === "ties") {
     score.ties += 1;
@@ -108,14 +108,27 @@ function playGame(playerMove) {
   document.querySelector(".js-result").innerHTML = result;
 
   document.querySelector(".js-moves").innerHTML = `you
-<img src="images/${playerMove}-emoji.png" class="move-icon" />
-<img src="images/${computerMove}-emoji.png" class="move-icon" />
-computer`;
+  <img src="images/${playerMove}-emoji.png" class="move-icon" />
+  <img src="images/${computerMove}-emoji.png" class="move-icon" />
+  computer`;
 
   /*alert(
     `You picked ${playerMove}. Computer picked ${computerMove}. ${result}
     wins:${score.wins}, losses:${score.losses}, ties:${score.ties}`
   );*/
+
+  //////// game move tracker history
+  function movesHistory() {
+    let containerMoves = document.getElementById("container-moves");
+    let players = [{playerMove: playerMove}, {computerMove: computerMove}]
+    let levizjet = document.createElement("li");
+    levizjet.className = "levizjet";
+    console.log(levizjet);
+    levizjet.innerHTML =`player1: ${players[0].playerMove} player2: ${players[1].computerMove}`;
+    containerMoves.append(levizjet);
+  }
+  movesHistory()
+
 }
 function updateScoreElement() {
   document.querySelector(
@@ -138,6 +151,8 @@ function pickComputerMove() {
 
   return computerMove;
 
-  return "rock";
-  return 5;
+  // return "rock";
+  // return 5;
 }
+
+

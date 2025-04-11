@@ -8,49 +8,53 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <p class="tite">rock paper scissors</p>
-    <button class="move-button js-rock-button">
-      <img src="/images/rock-emoji.png" class="move-icon" />
-    </button>
-    <button
-      onclick="
-      const computerMove = pickComputerMove();
+    <div class="container">
+      <div class="container-moves" id="container-moves">
+        <div class="game-moves">
+          <li class="levizjet" id="levizjet">play to start move history</li>
+          <!-- <li class="levizjet" id="levizjet">levizja player 1</li>
+          <li class="levizjet" id="levizjet">levizja player 1</li> -->
+        </div>
+      </div>
 
-let result = '';
+      <div class="game">
+        <p class="tite">rock paper scissors</p>
+        <button class="move-button js-rock-button">
+          <img src="./images/rock-emoji.png" class="move-icon" />
+        </button>
+        <button class="move-button js-paper-button">
+          <img src="./images/paper-emoji.png" class="move-icon" />
+        </button>
+        <button class="move-button js-scissor-button">
+          <img src="./images/scissors-emoji.png" class="move-icon" />
+        </button>
+        <p class="js-result result"></p>
+        <p class="js-moves"></p>
+        <p class="js-score score"></p>
 
-"
-      class="move-button js-paper-button"
-    >
-      <img src="./images/paper-emoji.png" class="move-icon" />
-    </button>
-    <button class="move-button js-scissor-button">
-      <img src="/images/scissors-emoji.png" class="move-icon" />
-    </button>
-    <p class="js-result result"></p>
-    <p class="js-moves"></p>
-    <p class="js-score score"></p>
-
-    <button
-      onclick="
-    score.wins = 0;
-    score.losses = 0;
-    score.ties = 0;
-    localStorage.removeItem('score');
-    updateScoreElement();
-    
-    "
-      class="reset-score-button"
-    >
-      Reset Score
-    </button>
-    <button
-      class="auto-play-button"
-      onclick="
-    autoPlay();
-    "
-    >
-      Auto Play
-    </button>
+        <button
+          onclick="
+        score.wins = 0;
+        score.losses = 0;
+        score.ties = 0;
+        localStorage.removeItem('score');
+        updateScoreElement();
+        
+        "
+          class="reset-score-button"
+        >
+          Reset Score
+        </button>
+        <button
+          class="auto-play-button"
+          onclick="
+        autoPlay();
+        "
+        >
+          Auto Play
+        </button>
+      </div>
+    </div>
     <script src="./javascript.js"></script>
   </body>
 </html>

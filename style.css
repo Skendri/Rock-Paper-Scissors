@@ -2,10 +2,37 @@ body {
   background-color: rgb(25, 25, 25);
   color: white;
   font-family: Arial, Helvetica, sans-serif;
-  position: absolute;
-  left: 440px;
-  top: 60px;
+  display: flex;
+
 }
+
+.container {
+  width: 100%;
+  display: flex;
+  /* gap: 5%; */
+  height: auto;
+}
+
+.container-moves {
+  width: 20%;
+  margin-left: 200px;
+  margin-top: 40px;
+}
+
+.game {
+  width: 100%;
+  margin-left: 200px;
+  margin-top: 40px;
+}
+
+.levizjet {
+  width: 100%;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 20px;
+  list-style: none;
+}
+
 .title {
   font-size: 30px;
   font-weight: bold;
