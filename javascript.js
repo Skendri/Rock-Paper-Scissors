@@ -122,7 +122,7 @@ function playGame(playerMove) {
     let containerMoves = document.getElementById("container-moves");
     let players = [{playerMove: playerMove}, {computerMove: computerMove}]
     let levizjet = document.createElement("li");
-    levizjet.className = "levizjet";
+    levizjet.className = "levizjet-java";
     console.log(levizjet);
     levizjet.innerHTML =`User 🤵: ${players[0].playerMove} Computer 💻: ${players[1].computerMove}`;
     containerMoves.append(levizjet);
