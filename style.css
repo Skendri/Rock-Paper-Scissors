@@ -14,10 +14,19 @@ body {
 }
 
 .container-moves {
-  width: 20%;
-  margin-left: 200px;
+  width: 25%;
+  margin-left: 100px;
   margin-top: 40px;
 }
+
+.game-moves {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: blue;
+}
+
+
 
 .game {
   width: 100%;
@@ -27,9 +36,9 @@ body {
 
 .levizjet {
   width: 100%;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: bold;
-  line-height: 20px;
+  line-height: 25px;
   list-style: none;
 }
 

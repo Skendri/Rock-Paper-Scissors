@@ -40,17 +40,17 @@ function autoPlay() {
 
 document.querySelector('.js-rock-button')
 .addEventListener('click', () => {
-  playGame('rock');
+  playGame('Rock');
 });
 
 document.querySelector('.js-paper-button')
 .addEventListener('click', () => {
-  playGame('paper');
+  playGame('Paper');
 });
 
 document.querySelector('.js-scissor-button')
 .addEventListener('click', () => {
-  playGame('scissors');
+  playGame('Scissors');
 });
 
 document.body.addEventListener('keydown', (event) => {
@@ -124,7 +124,7 @@ function playGame(playerMove) {
     let levizjet = document.createElement("li");
     levizjet.className = "levizjet";
     console.log(levizjet);
-    levizjet.innerHTML =`player1: ${players[0].playerMove} player2: ${players[1].computerMove}`;
+    levizjet.innerHTML =`User 🤵: ${players[0].playerMove} Computer 💻: ${players[1].computerMove}`;
     containerMoves.append(levizjet);
   }
   movesHistory()
@@ -151,14 +151,6 @@ function pickComputerMove() {
 
   return computerMove;
 
-<<<<<<< HEAD
   // return "rock";
   // return 5;
 }
-
-
-=======
-  return "rock";
-  return 5;
-}
->>>>>>> 97290c3cc6276e1b4296907d1c0f306f0f38e42e
