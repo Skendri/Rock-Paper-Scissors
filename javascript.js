@@ -38,19 +38,18 @@ function autoPlay() {
   
 }
 
-document.querySelector('.js-rock-button')
-.addEventListener('click', () => {
-  playGame('Rock');
+document.querySelector('.js-rock-button').addEventListener('click', () => {
+  playGame('rock');
 });
 
 document.querySelector('.js-paper-button')
 .addEventListener('click', () => {
-  playGame('Paper');
+  playGame('paper');
 });
 
 document.querySelector('.js-scissor-button')
 .addEventListener('click', () => {
-  playGame('Scissors');
+  playGame('scissors');
 });
 
 document.body.addEventListener('keydown', (event) => {
@@ -104,8 +103,9 @@ function playGame(playerMove) {
   localStorage.setItem("score", JSON.stringify(score));
 
   updateScoreElement();
+  
 
-  document.querySelector(".js-result").innerHTML = result;
+  document.querySelector(".js-result").innerHTML = result ;
 
   document.querySelector(".js-moves").innerHTML = `you
   <img src="images/${playerMove}-emoji.png" class="move-icon" />
@@ -117,24 +117,27 @@ function playGame(playerMove) {
     wins:${score.wins}, losses:${score.losses}, ties:${score.ties}`
   );*/
 
-  //////// game move tracker history
-  function movesHistory() {
-    let containerMoves = document.getElementById("container-moves");
-    let players = [{playerMove: playerMove}, {computerMove: computerMove}]
-    let levizjet = document.createElement("li");
-    levizjet.className = "levizjet-java";
-    console.log(levizjet);
-    levizjet.innerHTML =`User 🤵: ${players[0].playerMove} Computer 💻: ${players[1].computerMove}`;
-    containerMoves.append(levizjet);
-  }
-  movesHistory()
 
-}
+    //////// game move tracker history
+    function movesHistory() {
+      let containerMoves = document.getElementById("container-moves");
+      let players = [{playerMove: playerMove}, {computerMove: computerMove}]
+      let levizjet = document.createElement("li");
+      levizjet.className = "levizjet-java";
+      console.log(levizjet);
+      levizjet.innerHTML =`User 🤵: ${players[0].playerMove} Computer 💻: ${players[1].computerMove}`;
+      containerMoves.append(levizjet);
+    }
+    movesHistory()
+} // fundi i funksionit playGame(playerMove)
 function updateScoreElement() {
   document.querySelector(
     ".js-score"
   ).innerHTML = `wins:${score.wins}, losses:${score.losses}, ties:${score.ties}`;
 }
+
+
+
 
 function pickComputerMove() {
   const randomNumber = Math.random();
@@ -150,7 +153,4 @@ function pickComputerMove() {
   }
 
   return computerMove;
-
-  // return "rock";
-  // return 5;
 }

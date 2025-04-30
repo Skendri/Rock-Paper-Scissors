@@ -54,6 +54,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10%;
+  font-size: large;
 }
 
 .title {
