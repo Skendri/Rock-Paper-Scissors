@@ -38,7 +38,8 @@ function autoPlay() {
   
 }
 
-document.querySelector('.js-rock-button').addEventListener('click', () => {
+document.querySelector('.js-rock-button')
+.addEventListener('click', () => {
   playGame('rock');
 });
 
@@ -124,7 +125,6 @@ function playGame(playerMove) {
       let players = [{playerMove: playerMove}, {computerMove: computerMove}]
       let levizjet = document.createElement("li");
       levizjet.className = "levizjet-java";
-      console.log(levizjet);
       levizjet.innerHTML =`User 🤵: ${players[0].playerMove} Computer 💻: ${players[1].computerMove}`;
       containerMoves.append(levizjet);
     }
@@ -135,8 +135,6 @@ function updateScoreElement() {
     ".js-score"
   ).innerHTML = `wins:${score.wins}, losses:${score.losses}, ties:${score.ties}`;
 }
-
-
 
 
 function pickComputerMove() {
